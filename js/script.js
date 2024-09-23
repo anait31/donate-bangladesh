@@ -54,8 +54,20 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 
     document.getElementById('my-available-balance').innerText = parseFloat(MyCurrentBalance) - parseFloat(donationNoakhaliFlood);
 
+
+    // History Implementation
+    const donationHistory = document.getElementById('donation-history');
+    const titleNoakhaliFlood = document.getElementById('noakhali-flood').innerText;
+    const h2 = document.createElement('h2');
+    h2.classList.add('text-xl', 'font-bold');
+    h2.innerText = `${donationNoakhaliFlood} Taka is ${titleNoakhaliFlood}`
+    const p = document.createElement('p');
+    p.innerText = Date();
+    donationHistory.appendChild(h2);
+    donationHistory.appendChild(p);
+
     const modal = document.getElementById('my_modal_5');
-    modal.showModal()
+    modal.showModal();
 })
 
 
