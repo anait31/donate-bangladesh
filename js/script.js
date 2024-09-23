@@ -30,7 +30,7 @@ document.getElementById('toggle-donation-btn').addEventListener('click', functio
 
     const allDonationCard = getElementValueById('all-donation-card');
     allDonationCard.classList.remove('hidden');
-    
+
     getElementValueById('donation-history').classList.add('hidden')
 
 })
@@ -38,21 +38,26 @@ document.getElementById('toggle-donation-btn').addEventListener('click', functio
 
 
 // Implement Donation Functionality For Noakhali Flood
-document.getElementById('donation-btn').addEventListener('click', function() {
-    
+document.getElementById('donation-btn').addEventListener('click', function () {
+
     const donationNoakhaliFlood = parseFloat(document.getElementById('donation-noakhali-flood').value);
 
     let MyCurrentBalance = parseFloat(document.getElementById('my-available-balance').innerText);
     console.log(typeof MyCurrentBalance);
     let currentBalance = parseFloat(getElementValueById('current-balance').innerText);
 
-    if(MyCurrentBalance <  donationNoakhaliFlood || donationNoakhaliFlood < 0) {
-        return alert('Balance not available')
+    if (MyCurrentBalance < donationNoakhaliFlood || donationNoakhaliFlood < 0 || isNaN(donationNoakhaliFlood)) {
+        return alert('Invalid Donation Amount')
     }
-    
+
     getElementValueById('current-balance').innerText = currentBalance + donationNoakhaliFlood;
 
     document.getElementById('my-available-balance').innerText = parseFloat(MyCurrentBalance) - parseFloat(donationNoakhaliFlood);
 
+    const modal = document.getElementById('my_modal_5');
+    modal.showModal()
 })
+
+
+
 
