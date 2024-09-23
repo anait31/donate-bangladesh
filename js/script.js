@@ -59,5 +59,29 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 })
 
 
+// Implement Donate for Flood Relief in Feni
 
 
+document.getElementById('injured-donation-btn').addEventListener('click', function () {
+
+    const donationInjuredFlood = parseFloat(document.getElementById('donation-injured-field').value);
+
+    let MyCurrentBalance = parseFloat(document.getElementById('my-available-balance').innerText);
+
+    let currentBalance = parseFloat(getElementValueById('injured-current-balance').innerText);
+
+    if (MyCurrentBalance < donationInjuredFlood || donationInjuredFlood < 0 || isNaN(donationInjuredFlood)) {
+        return alert('Invalid Donation Amount')
+    }
+
+    getElementValueById('injured-current-balance').innerText = currentBalance + donationInjuredFlood;
+
+    document.getElementById('my-available-balance').innerText = parseFloat(MyCurrentBalance) - parseFloat(donationInjuredFlood);
+
+    const modal = document.getElementById('my_modal_5');
+    modal.showModal()
+    
+})
+
+
+// Implement Aid for Injured in the Quota Movement
