@@ -43,7 +43,6 @@ document.getElementById('donation-btn').addEventListener('click', function () {
     const donationNoakhaliFlood = parseFloat(document.getElementById('donation-noakhali-flood').value);
 
     let MyCurrentBalance = parseFloat(document.getElementById('my-available-balance').innerText);
-    console.log(typeof MyCurrentBalance);
     let currentBalance = parseFloat(getElementValueById('current-balance').innerText);
 
     if (MyCurrentBalance < donationNoakhaliFlood || donationNoakhaliFlood < 0 || isNaN(donationNoakhaliFlood)) {
@@ -119,3 +118,9 @@ document.getElementById('injured-donation-btn').addEventListener('click', functi
     modal.showModal()
 
 })
+
+
+// Blogs Design Section
+
+
+

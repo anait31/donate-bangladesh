@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Find Update</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="sticky top-0">
+        <div class="bg-[#F9F7F3]">
+            <header class="max-w-[1280px] mx-auto">
+                <div class="navbar py-3">
+                    <div class="navbar-start">
+                        <div class="navbar-end">
+                            <div class="flex">
+                                <div class="">
+                                    <button id="blogs"
+                                        class="px-5 py-2 rounded-lg md:text-2xl font-normal bg-[#B4F461] hidden">Blogs</button>
+                                </div>
+                                <div class="">
+                                    <button id="home"
+                                        class="px-5 py-2 rounded-lg md:text-2xl font-normal bg-[#B4F461]">Home</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="navbar-center lg:flex">
+                        <img src="./assets/logo.png" alt="donate">
+                        <h2 class="md:text-2xl ml-2">Donate Bangladesh</h2>
+                    </div>
+                    <div class="navbar-end md:text-2xl">
+                        <img src="./assets/coin.png" alt="">
+                        <p id="my-available-balance" class="mx-1">5900</p>
+                        <span>BDT</span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main class="max-w-[1280px] mx-auto mt-7">
+            <h1 class="text-4xl mb-3">Important FAQ</h1>
+            <div class="collapse border-2 border-b-0 rounded-md collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the
+                        structure of a document, such as an HTML or XML file, as a tree of objects, allowing developers
+                        to manipulate the content and structure of the document using programming languages like
+                        JavaScript.</p>
+                </div>
+            </div>
+            <div class="collapse border-2 border-b-0 rounded-md collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>We can select elements from the DOM using various methods provided by the document object in
+                        JavaScript. Here are some of the most common methods:</p>
+                </div>
+            </div>
+            <div class="collapse border-2 border-b-0 rounded-md collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation is a technique in the context of the DOM that allows you to handle events at a
+                        higher level in the DOM hierarchy rather than attaching event listeners to individual elements.
+                        Instead of adding an event listener to each target element, you can add a single listener to a
+                        parent element and leverage the event bubbling mechanism to manage events for all child
+                        elements.</p>
+                </div>
+            </div>
+            <div class="collapse border-2 rounded-md collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>We can manipulate an element's attributes and styles using various properties and methods provided by the DOM. Here’s how you can do both</p>
+                </div>
+            </div>
+        </main>
+        <!-- <script src="./js/script.js"></script> -->
+        <script src="./js/utilities.js"></script>
+</body>
+
+</html>
