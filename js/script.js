@@ -55,15 +55,24 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 
 
     // History Implementation
+
     const donationHistory = document.getElementById('donation-history');
+
     const titleNoakhaliFlood = document.getElementById('noakhali-flood').innerText;
+
     const h2 = document.createElement('h2');
     h2.classList.add('text-xl', 'font-bold');
-    h2.innerText = `${donationNoakhaliFlood} Taka is ${titleNoakhaliFlood}`
+    h2.innerText = `${donationNoakhaliFlood} Taka is ${titleNoakhaliFlood}`;
+
     const p = document.createElement('p');
-    p.innerText = Date();
-    donationHistory.appendChild(h2);
-    donationHistory.appendChild(p);
+    p.innerText = `Date: ${Date()}`;
+
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'mb-2', 'p-6', 'rounded-lg')
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    donationHistory.appendChild(div);
 
     const modal = document.getElementById('my_modal_5');
     modal.showModal();
@@ -89,6 +98,28 @@ document.getElementById('relief-donation-btn').addEventListener('click', functio
 
     document.getElementById('my-available-balance').innerText = parseFloat(MyCurrentBalance) - parseFloat(donationReliefFlood);
 
+
+    // History Implementation
+
+    const donationHistory = document.getElementById('donation-history');
+
+    const feniFlood = document.getElementById('feni-flood').innerText;
+
+    const h2 = document.createElement('h2');
+    h2.classList.add('text-xl', 'font-bold');
+    h2.innerText = `${donationReliefFlood} Taka is ${feniFlood}`;
+
+    const p = document.createElement('p');
+    p.innerText = `Date: ${Date()}`;
+
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'mb-2', 'p-6', 'rounded-lg')
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    donationHistory.appendChild(div);
+
+
     const modal = document.getElementById('my_modal_5');
     modal.showModal()
 
@@ -113,6 +144,28 @@ document.getElementById('injured-donation-btn').addEventListener('click', functi
 
 
     document.getElementById('my-available-balance').innerText = parseFloat(MyCurrentBalance) - parseFloat(donationInjuredFlood);
+
+
+    // History Implementation
+
+    const donationHistory = document.getElementById('donation-history');
+
+    const injuredAid = document.getElementById('injured-aid').innerText;
+
+    const h2 = document.createElement('h2');
+    h2.classList.add('text-xl', 'font-bold');
+    h2.innerText = `${donationInjuredFlood} Taka is ${injuredAid}`;
+
+    const p = document.createElement('p');
+    p.innerText = `Date: ${Date()}`;
+
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'mb-2', 'p-6', 'rounded-lg')
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    donationHistory.appendChild(div);
+
 
     const modal = document.getElementById('my_modal_5');
     modal.showModal()
